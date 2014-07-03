@@ -4,3 +4,27 @@ WHY.leading, WHY.trailing
 #={ ... }, #|{ ... }
 Test with space separation between them
 And much, much more! (ie. read S26 more)
+module Module;\n#= comment
+sub foo {}\n#= comment
+say 'hi'; sub foo {\n#= comment\n}
+
+say(sub {
+#= hello
+}.WHY)
+
+sub foo {} ; sub bar {}
+#= hi
+
+sub foo { #= comment
+#= another comment
+}
+#= yet another comment
+
+sub foo() {}
+say 'hi';
+#= comment
+
+sub
+foo {
+#= I'm being difficult!
+}
