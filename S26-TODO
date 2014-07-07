@@ -5,6 +5,7 @@ WHY.leading, WHY.trailing
 Test with space separation between them
 And much, much more! (ie. read S26 more)
 module Module;\n#= comment
+POD_BLOCKS
 sub foo {}\n#= comment
 say 'hi'; sub foo {\n#= comment\n}
 
@@ -28,3 +29,20 @@ sub
 foo {
 #= I'm being difficult!
 }
+
+sub foo { }
+#| before comment for bar
+#= after comment for foo
+sub bar { }
+
+#| really before
+#| before
+sub foo {} # doesn't work
+
+#| really before
+#| before
+sub foo {
+#= after
+}
+#= really after
+# this repeats really after
