@@ -48,3 +48,9 @@ sub foo {
 }
 #= really after
 # this repeats really after
+
+has $.first; has $.second; #= comment
+
+has #= comment
+  $.attribute #= another comment
+  = 17;
