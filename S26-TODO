@@ -8,6 +8,8 @@ module Module;\n#= comment
 POD_BLOCKS
 sub foo {}\n#= comment
 say 'hi'; sub foo {\n#= comment\n}
+regex/grammar trailing decls
+supersede and friends
 
 say(sub {
 #= hello
