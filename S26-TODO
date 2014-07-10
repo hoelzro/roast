@@ -54,3 +54,7 @@ has $.first; has $.second; #= comment
 has #= comment
   $.attribute #= another comment
   = 17;
+
+class Test {
+    has ($.foo, $.bar);
+}
