@@ -10,6 +10,7 @@ sub foo {}\n#= comment
 say 'hi'; sub foo {\n#= comment\n}
 regex/grammar trailing decls
 supersede and friends
+Can you document return values of subs?
 
 say(sub {
 #= hello
@@ -57,4 +58,15 @@ has #= comment
 
 class Test {
     has ($.foo, $.bar);
+}
+
+sub foo(Str $param1, Str $param2) {
+#= trailing comment for foo
+}
+
+sub foo(
+    Str $param
+)
+#= trailing comment that does nothing
+{
 }
